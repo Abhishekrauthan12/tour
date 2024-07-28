@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="contact.css">
+    <link rel="shortcut icon" href="icon/icon.png">
+    <link rel="stylesheet" href="contact-responsive.css">
+</head>
+<script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript">
+  (function() {
+    emailjs.init("PmLD1UZniEW7gGkpP");  // Replace "YOUR_USER_ID" with your actual EmailJS user ID
+  })();
+</script>
+<style>
+  .error {
+    color: red;
+  }
+</style>
+<body>
+<header>
+  <div class="row align-items-center">
+    <div class="logo">
+      <img src="icon/logo.png" alt="image.logo">
+    </div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a class="active" href="contact.html">Contact us</a></li>
+      </ul>
+    </nav>
+    <div class="btn">
+      <button>Pay Now</button>
+      <button>Contact Now</button>
+    </div>
+    <div class="icon">
+      &#9776;
+    </div>
+  </div>
+</header>
+
+<div class="banner">
+  <div class="container">
+    <h1>Contact Us</h1>
+    <p>Get in touch with our creator-friendly support team.
+      Our business hours are 9am-6pm ET Monday-Friday and 9am-5pm ET on weekends.
+    </p>
+  </div>
+</div>
+
+<div class="form">
+  <h2 class="text-center">Contact Form</h2><hr>
+  <div class="row">
+    <div class="col-50">
+      <div class="form-area">
+        <div class="container"> 
+          <form name="cc" onsubmit="return sendMail(this)">
+            <div class="row-2">
+              <p><input type="text" placeholder="Name" id="name" name="name"></p>
+              <span id="usererror" class="error"></span>
+              <p><input type="email" placeholder="Email" id="email" name="email"></p>
+              <span id="emailerror" class="error"></span>
+            </div>
+            <div class="row-2">
+              <p><input type="text" placeholder="Address" id="address" name="address"></p>
+              <span id="addresserror" class="error"></span>
+              <p><input type="number" placeholder="Mobile number" maxlength="10" id="mobile_number" name="mobile_number"></p>
+              <span id="mobileerror" class="error"></span>
+            </div>
+            <p>Gender:
+              <input type="radio" name="gender" value="male">Male
+              <input type="radio" name="gender" value="female">Female
+            </p>
+            <span id="generror" class="error"></span>
+            <p>Country:
+              <select name="country">
+                <option value="default">Select your country</option>
+                <option value="india">India</option>
+                <option value="australia">Australia</option>
+                <option value="us">US</option>
+                <option value="nz">NZ</option>
+                <option value="pakistan">Pakistan</option>
+              </select>
+            </p>
+            <span id="countryerror" class="error"></span>
+            <p>Message:</p>
+            <p><textarea rows="4" placeholder="Leave us a message" id="message" name="message"></textarea></p>
+            <p><input type="submit" value="Submit"></p>
+          </form>
+        </div> 
+      </div>
+    </div>
+    <div class="col-50">
+      <div class="info">
+        <p><i class='bx bx-mail-send'></i>mail@example.com</p>
+        <p><i class='bx bx-phone-call'></i>+1 222 222 333</p>
+        <p><i class='bx bx-building-house'></i>155 Market St #101,Mumbai, Maharashtra</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="testimonials">
+  <div class="container">
+    <h2>Testimonials</h2><hr>
+    <div class="row">
+      <div class="col-50">
+        <div class="image-area">
+          <img src="image/face1.jpg" alt="face1">
+          <p>Mr. Rohit Rawat</p>
+        </div>
+        <p>Boasting over two decades in the tourism and hospitality industry, Tour My India has amassed invaluable experience that sets us apart.</p>
+      </div>
+      <div class="col-50">
+        <div class="image-area">
+          <img src="image/face2.jpg" alt="face1">
+          <p>Miss. Seema Negi</p>
+        </div>
+        <p>They offer a meticulously selected and verified list of high-grade hotels. Our partners consistently deliver top-notch service, ensuring an exceptional experience for our guests.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="row">
+    <div class="col-30">
+      <h3>About Tour</h3>
+      <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+      <p><i class='bx bxl-instagram-alt'></i><i class='bx bxl-facebook-circle'></i><i class='bx bxl-twitter'></i><i class='bx bxl-meta'></i></p>
+    </div>
+    <div class="col-70">
+      <div class="col-33"><h3>Page</h3>
+        <ul><li>Blog</li></ul>
+        <ul><li>About</li></ul>
+        <ul><li>Contact</li></ul>
+      </div>
+      <div class="col-33"><h3>Resources</h3>
+        <ul><li>Blog</li></ul>
+        <ul><li>About</li></ul>
+        <ul><li>Contact</li></ul>
+      </div>
+      <div class="col-33"><h3>Contact</h3>
+        <p><i class='bx bxl-gmail'></i>mail@example.com</p>
+        <p><i class='bx bxs-phone-call'></i>+1 222 222 333</p>
+        <p><i class='bx bxs-edit-location'></i>Mumbai, Maharashtra</p>
+      </div>
+    </div>
+  </div>
+  <p class="text">Copyright ©2024. All Rights Reserved. — Designed with love by Untree.co Distributed By ThemeWagon</p>
+</footer>
+
+<script src="custom.js"></script>
+<script>
+  let icon = document.querySelector(".icon");
+  let ul = document.querySelector("ul");
+  icon.addEventListener("click", () => {
+    ul.classList.toggle("showData");
+  });
+</script>
+
+<script>
+  function sendMail(form) {
+    var name = document.getElementById('name').value;
+    var email = document.getElementById('email').value;
+    var address = document.getElementById('address').value;
+    var mobile_number = document.getElementById('mobile_number').value;
+    var gender = form.gender.value;
+    var country = form.country.value;
+    var message = document.getElementById('message').value;
+
+    var valid = true;
+    if (!name) {
+      document.getElementById('usererror').innerText = 'Please enter your name';
+      valid = false;
+    } else {
+      document.getElementById('usererror').innerText = '';
+    }
+    if (!email) {
+      document.getElementById('emailerror').innerText = 'Please enter your email';
+      valid = false;
+    } else {
+      document.getElementById('emailerror').innerText = '';
+    }
+    if (!address) {
+      document.getElementById('addresserror').innerText = 'Please enter your address';
+      valid = false;
+    } else {
+      document.getElementById('addresserror').innerText = '';
+    }
+    if (!mobile_number) {
+      document.getElementById('mobileerror').innerText = 'Please enter your mobile number';
+      valid = false;
+    } else {
+      document.getElementById('mobileerror').innerText = '';
+    }
+    if (!gender) {
+      document.getElementById('generror').innerText = 'Please select your gender';
+      valid = false;
+    } else {
+      document.getElementById('generror').innerText = '';
+    }
+    if (country === 'default') {
+      document.getElementById('countryerror').innerText = 'Please select your country';
+      valid = false;
+    } else {
+      document.getElementById('countryerror').innerText = '';
+    }
+
+    if (!valid) {
+      return false;
+    }
+
+    emailjs.send('service_hhzyb3l', 'template_4qy688n', {
+      name: name,
+      email: email,
+      address: address,
+      mobile_number: mobile_number,
+      gender: gender,
+      country: country,
+      message: message
+    })
+    .then(function(response) {
+      alert('SUCCESS! Email has been sent.');
+    }, function(error) {
+      alert('FAILED to send email.', error);
+    });
+
+    return false;
+  }
+</script>
+</body>
+</html>
